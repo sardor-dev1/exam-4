@@ -1,0 +1,242 @@
+#featured {
+    padding-bottom: 140px;
+
+    .featured__icon {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-weight: 600;
+        color: var(--button-color);
+        margin-bottom: 24px;
+    }
+
+    .featured__title {
+        font-family: Inter;
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 60px;
+    }
+
+    .featured__cards__wrapper {
+        display: grid;
+        grid-gap: 32px;
+        grid-template-areas:
+            'item1 item1 item2 item2'
+            'item1 item1 item3 item4'
+        ;
+
+        .featured__card1 {
+            grid-area: item1;
+            position: relative;
+            background-color: #000;
+            width: 100%;
+            max-width: 570px;
+            height: 600px;
+            text-align: center;
+            padding-top: 89px;
+            border-radius: 4px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .feature__card--title {
+                position: absolute;
+                bottom: 32px;
+                left: 32px;
+                width: 100%;
+                max-width: 242px;
+                text-align: start;
+
+                h4 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                a {
+                    font-weight: 500;
+                    color: #fafafa;
+                    text-decoration: none;
+                    border-bottom: 1px solid #fafafa;
+                }
+            }
+        }
+
+        .featured__card2 {
+            background-color: #000;
+            grid-area: item2;
+            width: 100%;
+            max-width: 570px;
+            height: 286px;
+            border-radius: 4px;
+            position: relative;
+            text-align: end;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .feature__card--title {
+                position: absolute;
+                bottom: 32px;
+                left: 24px;
+                width: 100%;
+                max-width: 260px;
+                text-align: start;
+
+                h4 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                a {
+                    font-weight: 500;
+                    color: #fafafa;
+                    text-decoration: none;
+                    border-bottom: 1px solid #fafafa;
+                }
+            }
+        }
+
+        .featured__card3 {
+            background-color: #000;
+            grid-area: item3;
+            width: 100%;
+            max-width: 270px;
+            height: 284px;
+            text-align: center;
+            padding-top: 31px;
+            position: relative;
+            border-radius: 4px;
+
+            img {
+                width: 90%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .feature__card--title {
+                position: absolute;
+                bottom: 32px;
+                width: 100%;
+                left: 24px;
+                max-width: 260px;
+                text-align: start;
+
+                h4 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                a {
+                    font-weight: 500;
+                    color: #fafafa;
+                    text-decoration: none;
+                    border-bottom: 1px solid #fafafa;
+                }
+            }
+        }
+
+        .featured__card4 {
+            background-color: #000;
+            grid-area: item4;
+            width: 100%;
+            max-width: 270px;
+            text-align: center;
+            padding-top: 31px;
+            position: relative;
+            border-radius: 4px;
+
+            img {
+                width: 90%;
+                object-fit: cover;
+            }
+
+            .feature__card--title {
+                position: absolute;
+                bottom: 32px;
+                left: 24px;
+                width: 100%;
+                max-width: 260px;
+                text-align: start;
+
+                h4 {
+                    font-size: 24px;
+                    font-weight: 600;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #fafafa;
+                    margin-bottom: 16px;
+                }
+
+                a {
+                    font-weight: 500;
+                    color: #fafafa;
+                    text-decoration: none;
+                    border-bottom: 1px solid #fafafa;
+                }
+            }
+        }
+
+        @media (max-width:1000px) {
+            grid-template-areas:
+            'item1 item1'
+            'item1 item1'
+            'item2 item2'
+            'item3 item4'
+        ;
+            justify-content: center;
+        }
+        @media (max-width:600px) {
+            grid-template-areas:
+            'item1 item1'
+            'item1 item1'
+            'item2 item2'
+            'item3 item3'
+            'item4 item4'
+        ;
+        .featured__card1 {
+            height: 350px;
+        }
+        }
+    }
+    @media (max-width:600px) {
+        padding-bottom: 50px;
+    }
+}

@@ -1,0 +1,14 @@
+@mixin btn($bg: var($btnCl), $cl: var($primaryCl), $size: 16px) {
+  background: green;
+  color: white;
+  font-size: 14px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: 0.4s;
+
+  &:hover {
+    color: $secondaryCl;
+    background: $mainCl;
+  }
+}
