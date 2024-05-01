@@ -349,6 +349,28 @@ main {
   }
 }
 
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+  padding: 50px 0;
+}
+.products .product__card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 270px;
+  border-radius: 15px;
+}
+.products .product__card__image {
+  padding: 15px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 230px;
+}
+.products .product__card__info {
+  padding: 25px;
+}
+
 #buy {
   padding-bottom: 70px;
 }
