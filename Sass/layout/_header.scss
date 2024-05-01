@@ -67,13 +67,14 @@
     }
 
     input {
+      outline: none;
       border: none;
       background: rgb(243, 241, 241);
       padding: 10px 35px 10px 10px;
       border-radius: 4px;
       width: 240px;
     }
-    
+      
   }
   &__img__icon {
     width: 30px;
@@ -194,11 +195,6 @@
   .header {
     &__list {
       width: 80%;
-    }
-    &__btns {
-      button {
-        display: none;
-      }
     }
   }
 }
