@@ -89,11 +89,12 @@
 
   &__item {
     font-weight: 600;
-    padding: 4px 0;
+    padding: 4px 0 1px;
     transition: 0.3s;
+    border-bottom: 2px solid transparent;
 
     &:hover {
-      color: $mainCl;
+      border-color: gray
     }
   }
 

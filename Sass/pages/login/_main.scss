@@ -12,8 +12,8 @@
             }
         }
         &--right {
-            width: 371px;
-
+            width: 100%;
+            max-width: 371px;
             h2 {
                 font-size: 36px;
                 font-weight: 500;
@@ -48,6 +48,44 @@
                     @extend %button;
                     &:hover {
                         background-color: #E07575;
+                    }
+                }
+            }
+        }
+
+        @media (max-width:1030px) {
+            justify-content: center;
+            &--left {
+                display: none;
+            }
+
+            &--right {
+                width: 380px;
+                border: 2px solid rgb(229, 226, 226);
+                padding: 25px;
+                border-radius: 15px;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                h2 {
+                    font-size: 32px;
+                }
+            }
+        }
+        @media (max-width:440px) {
+            padding-top: -80px;
+            &--right {
+                h2 {
+                    font-size: 28px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    margin-bottom: 24px;
+                }
+                .log {
+                    flex-direction: column;
+                    gap: 15px;
+
+                    button {
+                        padding: 12px 50px;
                     }
                 }
             }

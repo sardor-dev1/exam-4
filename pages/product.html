@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Log in</title>
+    <title>Product</title>
 </head>
 
 <body>
@@ -50,6 +50,8 @@
                     <input placeholder="What are you looking for?" class="input__select" type="text" />
                     <i class="fa-solid fa-magnifying-glass header__btns__search"></i>
                 </div>
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <img class="header__btns__buy" src="./images/header/Cart1 with buy.svg" alt="">
                 <button class="header__hamburger">
                     <span></span>
                     <span></span>
@@ -59,31 +61,13 @@
         </nav>
     </header>
     <!-- ------------------ Header End -------------- -->
-
+    
     <main>
-        <section id="login-section">
-            <div class="container">
-                <div class="login__wrapper">
-                    <div class="login__wrapper--left">
-                        <img src="../images/login/dl.beatsnoop 1.png" alt="img">
-                    </div>
-                    <div class="login__wrapper--right">
-                        <h2>Log in to Exclusive</h2>
-                        <p>Enter your details below</p>
-                        <form class="login__form" action="https://echo.htmlacademy.ru">
-                            <input class="email" value="kevinryan" type="text" placeholder="Email or Phone Number" required>
-                            <input class="password" value="kev02937@" type="password" placeholder="Password" required>
-                            <div class="log">
-                                <button type="submit">Log In</button>
-                                <a href="#">Forget Password?</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <section class="producting container">
+            <div class="product__card"></div>
         </section>
     </main>
-
+    
     <!-- ------------------ Footer Start ------------ -->
     <footer>
         <div class="container">
@@ -141,10 +125,9 @@
     </footer>
     <!-- ------------------------ Footer End ---------------- -->
 
-
 </body>
 
-<script type="module" src="../js/login.js"></script>
-<script type="module" src="./js/main.js"></script>
-
+<script type="module" src="../js/product.js"></script>
+<script src="../js/counter-app.js"></script>
+<script src="../js/counter-map.js"></script>
 </html>

@@ -32,7 +32,6 @@ productMoreBtn.addEventListener("click", () => {
   loadProductData(API_URL);
 });
 
-// loadProductData(API_URL)
 
 function renderProducts(data) {
   let cards = "";
@@ -43,7 +42,7 @@ function renderProducts(data) {
             <div class="product__card__image">
                 <i class="fa-regular fa-heart product__card__image__like"></i>
                 <img src=${product.image} alt="">
-                <button class="product__card__image__btn">Add To Cart</button>
+                <button class="add-to-card product__card__image__btn" data-id=${product.id}>Add To Cart</button>
             </div>
             <div class="product__card__info">
               <h3 class="product__card__info__title">${product.category}</h3>
@@ -54,6 +53,13 @@ function renderProducts(data) {
   });
   productsCards.innerHTML = cards;
 }
+
+productsCards.addEventListener('click', (e)=> {
+  if (e.target.classList.contains('add-to-card')) {
+    let id = e.target.dataset.id;
+    window.open(`./pages/product.html?id=${id}`, "_self");
+  }
+})
 
 function loadCard(count) {
   let loadingCards = "";

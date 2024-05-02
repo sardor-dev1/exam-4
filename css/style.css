@@ -193,11 +193,12 @@ main {
 }
 .header__item {
   font-weight: 600;
-  padding: 4px 0;
+  padding: 4px 0 1px;
   transition: 0.3s;
+  border-bottom: 2px solid transparent;
 }
 .header__item:hover {
-  color: green;
+  border-color: gray;
 }
 .header .loginBtn {
   background: green;
@@ -300,15 +301,17 @@ main {
   flex-direction: column;
   gap: 10px;
   padding: 20px;
-  height: 230px;
+  height: 350px;
+  width: 100%;
+  max-width: 270px;
 }
 .loading__card__info {
   padding: 20px;
-  height: 30px;
+  height: 300px;
 }
 .loading__card__img {
   width: 100%;
-  height: 100%;
+  height: 50%;
 }
 .loading .bg__animation {
   background: linear-gradient(90deg, #eee, #ddd, #eee);
@@ -862,7 +865,8 @@ main {
   right: 200px;
 }
 #login-section .login__wrapper--right {
-  width: 371px;
+  width: 100%;
+  max-width: 371px;
 }
 #login-section .login__wrapper--right h2 {
   font-size: 36px;
@@ -895,6 +899,43 @@ main {
 #login-section .login__wrapper--right form button:hover {
   background-color: #E07575;
 }
+@media (max-width: 1030px) {
+  #login-section .login__wrapper {
+    justify-content: center;
+  }
+  #login-section .login__wrapper--left {
+    display: none;
+  }
+  #login-section .login__wrapper--right {
+    width: 380px;
+    border: 2px solid rgb(229, 226, 226);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  #login-section .login__wrapper--right h2 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 440px) {
+  #login-section .login__wrapper {
+    padding-top: -80px;
+  }
+  #login-section .login__wrapper--right h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  #login-section .login__wrapper--right p {
+    margin-bottom: 24px;
+  }
+  #login-section .login__wrapper--right .log {
+    flex-direction: column;
+    gap: 15px;
+  }
+  #login-section .login__wrapper--right .log button {
+    padding: 12px 50px;
+  }
+}
 
 #account {
   padding-top: 80px;
@@ -919,7 +960,7 @@ main {
   padding-left: 30px;
 }
 #account .account__wrapper--left > div div .red {
-  color: var(--button-color);
+  color: red;
 }
 #account .account__wrapper--left > div div p {
   color: rgba(0, 0, 0, 0.5);
@@ -928,17 +969,19 @@ main {
 #account .account__wrapper--right {
   width: 870px;
   padding: 40px 80px;
+  border-radius: 4px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #account .account__wrapper--right-title {
   font-size: 20px;
   font-weight: 500;
-  color: var(--button-color);
+  color: red;
   margin-bottom: 16px;
 }
 #account .account__wrapper--right .account__information--input {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
 }
 #account .account__wrapper--right .account__information--input label {
   display: block;
@@ -947,7 +990,7 @@ main {
 #account .account__wrapper--right .account__information--input input {
   outline: none;
   margin-bottom: 24px;
-  width: 330px;
+  width: 100%;
   padding: 13px 16px;
   border: none;
   background-color: #F5F5F5;
@@ -981,6 +1024,198 @@ main {
 }
 #account .account__wrapper--right .account__button button:hover {
   background-color: #E07575;
+}
+@media (max-width: 1260px) {
+  #account .account__wrapper {
+    flex-direction: column;
+  }
+  #account .account__wrapper--left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #account .account__wrapper--right {
+    width: 100%;
+  }
+  #account .account__wrapper--right input {
+    width: 100%;
+  }
+}
+@media (max-width: 950px) {
+  #account .account__wrapper--right {
+    padding: 40px;
+  }
+}
+@media (max-width: 700px) {
+  #account .account__wrapper--left {
+    flex-direction: column;
+  }
+  #account .account__wrapper--right {
+    padding: 20px;
+  }
+  #account .account__wrapper .account__information--input {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  #account .account__wrapper .account__button {
+    flex-direction: column;
+  }
+  #account .account__wrapper .account__button button {
+    width: 80%;
+  }
+}
+
+.product__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 130px 0 90px;
+}
+.product__wrap .product__card__img img {
+  width: 100%;
+  max-width: 400px;
+}
+@media (max-width: 980px) {
+  .product__wrap {
+    flex-direction: column;
+  }
+}
+
+.product__card__info {
+  width: 100%;
+  max-width: 500px;
+}
+.product__card__info__title {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+.product__card__info__stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.product__card__info__stars__reviews {
+  font-size: 14px;
+  font-weight: 400;
+}
+.product__card__info__stars__stock {
+  font-size: 14px;
+  font-weight: 400;
+  color: #00FF66;
+}
+.product__card__info__price {
+  font-size: 24px;
+  font-weight: 400;
+  padding: 16px 0 24px;
+}
+.product__card__info__desc {
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 370px;
+  padding: 0 0 24px;
+  border-bottom: 1.5px solid gray;
+  margin-bottom: 24px;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.product__card__info__color {
+  display: flex;
+  gap: 5px;
+}
+.product__card__info__size {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.product__card__info__size button {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid gray;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.product__card__info__size button:hover {
+  transform: scale(1.04);
+  background-color: #DB4444;
+  color: white;
+}
+.product__card__info__size button:active {
+  transform: scale(0.8);
+}
+.product__card__info__size p {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 24px 10px 24px 0;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.counter__btns {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .counter__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+.number__counter {
+  text-align: center;
+  border-radius: 25px;
+}
+.number__counter h1 {
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  width: 80px;
+  color: black;
+  padding: 3px 15px;
+  border: 1px solid gray;
+}
+.number__counter button {
+  padding: 10px 8px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  transition: 0.05s;
+}
+.number__counter button img {
+  width: 15px;
+  align-items: center;
+  display: flex;
+}
+.number__counter button:hover {
+  transform: scale(1.04);
+  background-color: #DB4444;
+  color: white;
+}
+.number__counter button:active {
+  transform: scale(1);
+}
+.number__counter__buy-now {
+  background-color: #DB4444 !important;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 10px;
+  padding: 4px 48px !important;
 }
 
 footer {

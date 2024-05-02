@@ -5,7 +5,6 @@
     .account__wrapper {
         display: flex;
         justify-content: space-between;
-
         &--left {
             width: 200px;
 
@@ -22,7 +21,7 @@
                     padding-left: 30px;
 
                     .red {
-                        color: var(--button-color);
+                        color: red;
                     }
 
                     p {
@@ -36,18 +35,20 @@
         &--right {
             width: 870px;
             padding: 40px 80px;
+            border-radius: 4px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
             &-title {
                 font-size: 20px;
                 font-weight: 500;
-                color: var(--button-color);
+                color: red;
                 margin-bottom: 16px;
             }
 
             .account__information--input {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 50px;
 
                 label {
                     display: block;
@@ -57,7 +58,7 @@
                 input {
                     outline: none;
                     margin-bottom: 24px;
-                    width: 330px;
+                    width: 100%;
                     padding: 13px 16px;
                     border: none;
                     background-color: #F5F5F5;
@@ -105,6 +106,52 @@
                     }
                 }
             }
+        }
+
+        @media (max-width:1260px) {
+            flex-direction: column;
+
+            &--left {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            &--right {
+                width: 100%;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+        @media (max-width:950px) {
+            &--right {
+                padding: 40px;
+            }
+        }
+        @media (max-width:700px) {
+
+            &--left {
+                flex-direction: column;
+            }
+
+            &--right {
+                padding: 20px;
+            }
+            
+            .account__information--input {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+                
+            }
+
+            .account__button {
+                flex-direction: column;
+                button {
+                    width: 80%;
+                }
+            }
+
         }
     }
 }
